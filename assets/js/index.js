@@ -203,8 +203,8 @@ prevBtn.addEventListener("click", () => {
   sliderArrows.handlePrevButtonClick(nextBtn, prevBtn);
 });
 window.addEventListener("resize", () => {
-  sliderArrows.positionNextArrowButton(null, nextBtn, productList);
-  sliderArrows.positionPrevArrowButton(null, prevBtn, productList);
+  sliderArrows.positionNextArrowButton(undefined, nextBtn, productList);
+  sliderArrows.positionPrevArrowButton(undefined, prevBtn, productList);
   sliderArrows.handleNextButtonClick(nextBtn, prevBtn);
   sliderArrows.handlePrevButtonClick(nextBtn, prevBtn);
 });
@@ -231,3 +231,4 @@ export { fetchData, initializer };
  * - Allow other files (the "child" scripts that import the parent module)
  *   to customize or extend only the specific functions they need to change.
  **/
+
