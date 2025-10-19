@@ -144,9 +144,15 @@
 }
 .about-card .our-mission-text {
   right: 10%;
+    place-self: start;
+  align-self: center;
+
 }
 .about-card .our-vision-text {
   right: -10%;
+    place-self: end;
+  align-self: center;
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -166,3 +172,4 @@
     right: 0;
   }
 }
+
