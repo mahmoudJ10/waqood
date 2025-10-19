@@ -8,8 +8,7 @@ let index = 0;
 let activeCard = null;
 let productCardList = null;
 
-let sliderRect = null;
-let cardRect = null;
+
 
 /** card appearence work flow:
  *
@@ -231,4 +230,5 @@ export { fetchData, initializer };
  * - Allow other files (the "child" scripts that import the parent module)
  *   to customize or extend only the specific functions they need to change.
  **/
+
 
