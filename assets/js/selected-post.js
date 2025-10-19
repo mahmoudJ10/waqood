@@ -108,7 +108,7 @@ const postHelper = {
   easeTraverseAdjust: (clickedPostID) => {
     if (!(clickedPostID === posts.length)) {
       nextPostBtn.href = `selected-post.html?id=${clickedPostID + 1}`;
-    } else if (!(clickedPostID - 1 === 0)) {
+    } if (!(clickedPostID - 1 === 0)) {
       prevPostBtn.href = `selected-post.html?id=${clickedPostID - 1}`;
     }
   },
@@ -139,3 +139,4 @@ async function fetchPosts() {
   }
 }
 if (post) postAppearance.initializer();
+
