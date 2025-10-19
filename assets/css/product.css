@@ -1,0 +1,140 @@
+#product * {
+  font-family: "Kodchasan", "san-serif";
+}
+#product {
+  width: 100%;
+  height: 457px;
+  min-height: fit-content;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 100%;
+  letter-spacing: 2%;
+  background: url("../images/products/products-bg.png");
+  background-size: cover;
+  overflow-x: hidden;
+  backdrop-filter: brightness(0.95);
+}
+#product::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  opacity: 5%;
+  overflow-x: hidden;
+}
+#product .product-list {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
+.product-card {
+  min-width: 17rem;
+  max-width: 17rem;
+
+  height: 25rem;
+  display: grid;
+  gap: 1rem;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.product-card-img {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  grid-row: span 5;
+  place-content: center;
+  text-align: center;
+  place-self: center;
+}
+.product-card-name {
+  background-color: white;
+  width: 100%;
+  height: fit-content;
+  min-height: fit-content;
+  padding: 1rem 1.7rem;
+  align-content: center;
+}
+
+.active-product-card p {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.active-product-card > .product-card-img {
+  border: 1px solid #c69736;
+}
+.product-list .slider {
+  width: 100%;
+  height: 100%;
+
+  margin: 0px auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.5s ease;
+}
+.prev-arrow img {
+  transform: rotate(180deg);
+}
+.hidden {
+  display: none;
+}
+
+.upcoming-product {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 2%;
+  position: relative;
+  top: 40%;
+  left: 25%;
+  z-index: -1000;
+  place-content: center;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
+.mask-product-card {
+  width: 16.8rem;
+  height: 25rem;
+
+  position: absolute;
+  z-index: 10;
+}
+.arrow {
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 10000;
+  border: none;
+  border-radius: 50%;
+  background-color: #C6973673;
+  transition: background-color 0.3s ease;
+}
+.arrow img {
+  width: 28px;
+  height: 28px;
+  transition: background-color 0.2s ease-out;
+}
+.arrow img:hover {
+  cursor: pointer;
+}
+
+/**
+-- problem description --
+-- when clicking on the product card, it should be highlighted 
+-- even if i clicked on any element inside the card 
+
+solution: 
+- create a mask div that covers the whole card
+- when clicking on any element inside the card, the event will be propagated to the mask div
+
+*/

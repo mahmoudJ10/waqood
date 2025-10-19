@@ -1,0 +1,327 @@
+/***** Hero-Section & aboutSummery **/
+
+#hero {
+  width: 100%;
+  height: 100vh;
+
+  font-family: Kodchasan, "sans-serif";
+  background-image: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.541)),
+    url('../images/index/hero-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+}
+
+.hero > * {
+  width: 100%;
+  text-align: center;
+}
+
+.hero h2 {
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+}
+.hero h3 {
+  font-weight: 700;
+  font-style: bold;
+  font-size: 31px;
+
+  line-height: 45px;
+  text-transform: capitalize;
+}
+.hero img {
+  width: 4.5rem;
+  height: 4.4rem;
+}
+
+/* about  */
+#aboutSummery {
+  width: 100%;
+  min-height: 30vh;
+  max-height: fit-content;
+
+  font-family: kodchasan, "sans-serif";
+  position: relative;
+  bottom: 2.5rem;
+}
+#aboutSummery * {
+  font-family: kodchasan, "sans-serif";
+}
+#aboutSummery .about-logo {
+  height: fit-content;
+}
+#aboutSummery .about {
+  width: 65%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+#aboutSummery .about-logo * {
+  display: block;
+  place-self: center;
+}
+#aboutSummery .about p {
+  width: fit-content;
+  min-width: 250px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 2%;
+  text-align: center;
+}
+#aboutSummery .about-button {
+  width: 8rem;
+  display: flex;
+}
+#aboutSummery .about-button a {
+  width: inherit;
+  background: url("../images/index/button-bg.png");
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  letter-spacing: 2%;
+  border: none;
+  font-weight: 400;
+  padding: 0.5rem;
+  color: white;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+#aboutSummery .about-button a:hover {
+  filter: brightness(120%);
+}
+#aboutSummery .about-button img {
+  position: relative;
+  top: 0;
+  z-index: -1;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 760px) {
+  .about p {
+    font-size: smaller;
+  }
+}
+/**
+- problems solved:
+ -- how to change the brightness of the background image without effecting the front elements
+--- so its all about visual layering , if we use filter -> brawser will render image and text then the filter will be applied to both of them
+    but if we use pseudo element ::before or ::after -> browser will render the pseudo element first then the text
+ -- more effecient solution: which is to change the background-image properity (give u same result) *_*
+*/
+
+/************ Product ***************/
+
+#product * {
+  font-family: "Kodchasan", "san-serif";
+}
+#product {
+  width: 100%;
+  height: 457px;
+  min-height: fit-content;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 100%;
+  letter-spacing: 2%;
+  background: url("../images/products/products-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  backdrop-filter: brightness(0.95);
+}
+#product::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  opacity: 5%;
+  overflow-x: hidden;
+}
+#product .product-list {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
+.product-card {
+  height: 100%;
+  max-height: 25rem;
+  width: 17rem;
+  min-width: 17rem;
+  display: grid;
+  gap: 1rem;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.product-card-img {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  grid-row: span 5;
+  place-content: center;
+  text-align: center;
+  place-self: center;
+}
+.product-card-name {
+  background-color: white;
+  width: 100%;
+  height: fit-content;
+  min-height: fit-content;
+  padding: 1rem 1.7rem;
+  align-content: center;
+}
+
+.active-product-card p {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.active-product-card > .product-card-img {
+  border: 1px solid #c69736;
+}
+.product-list .slider {
+  width: 100%;
+  height: 100%;
+
+  margin: 0px auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.5s ease;
+}
+.prev-arrow img {
+  transform: rotate(180deg);
+}
+.hidden {
+  display: none;
+}
+
+.upcoming-product {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 2%;
+  position: absolute;
+  bottom: 35%;
+  left: 30%;
+  line-height: 100%;
+  place-content: center;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
+.mask-product-card {
+  width: 16.8rem;
+  height: 25rem;
+
+  position: absolute;
+  z-index: 10;
+}
+.arrow {
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 10000;
+  border: none;
+  border-radius: 50%;
+  background-color: #C6973673;
+  transition: background-color 0.3s ease;
+}
+.arrow img {
+  width: 28px;
+  height: 28px;
+  transition: background-color 0.2s ease-out;
+}
+.arrow img:hover {
+  cursor: pointer;
+}
+
+/********* Hyperlink ***********/
+#hyperlink {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  padding: 3rem;
+  font-family: Kodchasan;
+}
+
+.hyperlink {
+  width: 100%;
+  height: 100%;
+  background: url("../images/index/hyperlink.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+
+  background-position: center;
+  align-content: center;
+
+  text-align: center;
+}
+
+.hyperlink::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  backdrop-filter: brightness(0.2);
+}
+.hyperlink a {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 2%;
+  text-decoration: none;
+  position: relative;
+  color: white;
+}
+@media screen and (max-width: 720px) {
+  .hero h3 {
+    font-size: 1.5rem;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+/**
+-- problem description --
+-- when clicking on the product card, it should be highlighted 
+-- even if i clicked on any element inside the card 
+
+solution: 
+- create a mask div that covers the whole card
+- when clicking on any element inside the card, the event will be propagated to the mask div
+
+*/

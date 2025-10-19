@@ -1,0 +1,168 @@
+#about {
+  --main-color: rgba(98, 98, 98, 1);
+  --main-background-color: rgba(198, 151, 54, 1);
+  width: 100%;
+
+  font-family: "Kodchasan";
+
+  padding: 4rem 0;
+}
+.about-container {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+.about-main {
+  width: 100%;
+  height: fit-content;
+  place-items: start;
+  display: grid;
+  grid-template-columns: 60% auto;
+  grid-template-rows: minmax(580px, fit-content);
+  gap: 4rem;
+}
+.about-main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.about-logo * {
+  display: block;
+}
+.about-logo {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-logo-star {
+  width: 65px;
+  height: 76px;
+  filter: drop-shadow(-4px -6px rgba(198, 151, 54, 0.36));
+}
+.about-logo-text {
+  filter: blur(var(--main-color));
+}
+
+.about-main h3 {
+  font-weight: 700;
+  font-size: 25px;
+  font-style: bold;
+  line-height: 30px;
+  letter-spacing: 2%;
+  color: rgba(98, 98, 98, 1);
+}
+.about-main-p,
+.about-main-p-extend {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 2%;
+  color: rgba(98, 98, 98, 1);
+}
+.about-main-p-extend {
+  font-weight: 100;
+}
+.about-main a {
+  width: 112px;
+  height: 38px;
+  cursor: pointer;
+
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background-color: var(--main-background-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 2%;
+
+  place-content: center;
+  text-align: center;
+
+  color: var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+.about-main a:hover {
+  opacity: 0.9;
+}
+
+.about-main > img {
+  width: 100%;
+  place-self: end;
+  height: 100%;
+}
+
+.about-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 6rem;
+}
+
+.about-card > * {
+  width: 100%;
+  height: 100%;
+}
+.about-card h3 {
+  font-weight: 700;
+  font-size: 20px;
+  font-style: bold;
+  line-height: 28px;
+  letter-spacing: 2%;
+  color: rgba(37, 37, 37, 1);
+}
+.about-card hr {
+  margin: 0px;
+  border: none;
+  width: 10%;
+  height: 3px;
+
+  background-color: var(--main-background-color);
+}
+.about-card p {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  letter-spacing: 2%;
+}
+.about-card .our-mission-text,
+.about-card .our-vision-text {
+  max-width: 700px;
+  min-height: 250px;
+  max-height: fit-content;
+  place-self: center;
+  height: 70%;
+  background-color: rgba(250, 250, 250, 1);
+  padding: 1rem;
+  position: relative;
+}
+.about-card .our-mission-text {
+  right: 10%;
+}
+.about-card .our-vision-text {
+  right: -10%;
+}
+
+@media screen and (max-width: 1000px) {
+  .about-main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 500px;
+  }
+  .about-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 300px);
+
+    row-gap: 0;
+  }
+  .about-card .our-mission-text,
+  .about-card .our-vision-text {
+    position: relative;
+    right: 0;
+  }
+}

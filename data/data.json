@@ -1,0 +1,94 @@
+{
+  "product": [
+    {
+      "imgSrc": "./assets/images/products/product1.png",
+      "name": "Gasoline 90",
+      "status": "available"
+    },
+    {
+      "imgSrc": "./assets/images/products/product2.png",
+      "name": "Gasoline 95",
+      "status": "available"
+    },
+    {
+      "imgSrc": "./assets/images/products/product3.png",
+      "name": "Car Oil",
+      "status": "available"
+    },
+    {
+      "imgSrc": "./assets/images/products/product4.png",
+      "name": "Deisel",
+      "status": "available"
+    }
+  ],
+  "allProducts": [
+    {
+      "imgSrc": "./assets/images/products/product3.png",
+      "name": "Mobil Lubricants",
+      "status": "available"
+    },
+    {
+      "imgSrc": "./assets/images/products/product4.png",
+      "name": "New Product",
+      "status": "upcoming"
+    }
+  ],
+  "posts": {
+    "data": [
+      {
+        "url": "./assets/images/posts/post1.png",
+        "date": "News - 14.02.2025",
+        "href": "selected-post.html?id=1",
+
+        "title": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered ",
+        "desc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem ",
+        "id": "1"
+      },
+      {
+        "url": "./assets/images/posts/post2.png",
+        "date": "News - 14.02.2025",
+        "href": "selected-post.html?id=2",
+
+        "title": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered ",
+        "desc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem ",
+        "id": "2"
+      },
+      {
+        "url": "./assets/images/posts/post3.png",
+        "date": "Event - 14.02.2025",
+        "href": "selected-post.html?id=3",
+
+        "title": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered ",
+        "desc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem ",
+        "id": "3"
+      },
+      {
+        "url": "./assets/images/posts/post4.png",
+        "date": "Event - 14.02.2025",
+        "href": "selected-post.html?id=4",
+
+        "title": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered ",
+        "desc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem ",
+        "id": "4"
+      },
+      {
+        "url": "./assets/images/posts/post1.png",
+        "date": "News - 14.02.2025",
+        "href": "selected-post.html?id=5",
+
+        "title": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered ",
+        "desc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem ",
+        "id": "5"
+      },
+      {
+        "url": "./assets/images/posts/post2.png",
+        "date": "News - 14.02.2025",
+        "href": "selected-post.html?id=6",
+        "title": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered ",
+        "desc": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem ",
+        "id": "6"
+      }
+    ],
+    "totalPosts": 6
+  }
+}
